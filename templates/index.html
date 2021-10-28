@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="./static/css/index_style.css">
+</head>
+
+<body>
+    <div>
+        여기는 html 영역입니다. 
+        <a href="/about"> 어바웃페이지로 이동 </a>
+    </div>
+
+    <div class='content'>
+        <h1> 여기는 daum menu 영역입니다. </h1> 
+        <ul>
+            {% for i in range(0, daum_len) %}
+                <a href="{{ daum_href[i] }}"><li>{{ daum[i] }}</li></a>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class='content'>
+        <h1> 여기는 todayhumor bestofbest 영역입니다. </h1>
+        <ul>
+            {% for i in range(0, today_len) %}
+                <a href="{{ today_href[i] }}"><li>{{ today[i] }}</li></a>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class='content'>
+        <h1> 여기는 clien recommend 영역입니다. </h1>
+        <ul>
+            {% for i in range(0, clien_len) %}
+                <a href="{{ clien_href[i] }}"><li>{{ clien[i] }}</li></a>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>
+
